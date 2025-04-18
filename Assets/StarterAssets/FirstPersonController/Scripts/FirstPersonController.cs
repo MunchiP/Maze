@@ -14,7 +14,7 @@ namespace StarterAssets
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
-		public float MoveSpeed;
+		public float MoveSpeed = 4.0f;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
 
@@ -96,6 +96,7 @@ namespace StarterAssets
 
 		private void Update()
 		{
+			Debug.Log(TopClamp);
 			GroundedCheck();
 			Move();
 		}
@@ -120,7 +121,7 @@ namespace StarterAssets
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-				_cinemachineTargetPitch -= _input.look.y * RotationSpeed * deltaTimeMultiplier;
+				_cinemachineTargetPitch -= -_input.look.y * RotationSpeed * deltaTimeMultiplier;
 				_cinemachineTargetPitch = Math.Clamp(_cinemachineTargetPitch, BottomClamp, TopClamp);
 				_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;			
 
