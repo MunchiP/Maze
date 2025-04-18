@@ -56,5 +56,9 @@
         "temp/": true,
         "Temp/": true
     },
+<<<<<<< HEAD
     "dotnet.defaultSolution": "MazeProject.sln"
+=======
+    "dotnet.defaultSolution": "Maze.sln"
+>>>>>>> df5b9a70251f8fe07cd677516bb57e268e8b957c
 }
