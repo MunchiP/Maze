@@ -42,3 +42,7 @@ UserSettings/
 
 # Unity Cache
 *.bak
+
+# Archivos que suelen variar según el entorno local
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/Packages/**/*.json
